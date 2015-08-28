@@ -1,0 +1,13 @@
+<ion-view title="Places" ng-controller="PlacesController as placesCtrl">
+  <ion-content>
+    <div collection-repeat="place in placesCtrl.places">
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-world"></i>
+        <span ng-bind="place.name"></span>
+          <span class="item-note">
+            <span ng-bind="place.distance"></span>
+          </span>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

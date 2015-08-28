@@ -1,0 +1,36 @@
+.place-card {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #f7fdf8;
+  border: 1px solid #eef6ef;
+  border-radius: 2px;
+  padding: 3px;
+}
+
+.place-info {
+  display: flex;
+  flex-flow: column;
+  margin-right: 5px;
+  font-size: 12px;
+  flex-grow: 3;
+  min-width: 200px;
+}
+
+.place-title {
+  font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.place-distance {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-self: center;
+  flex-grow: 1;
+}
+
+.place-address {
+
+}

@@ -1,0 +1,318 @@
+@import "place-card";
+
+$device-width: 320px;
+$header-height: 60px;
+$menu-width: 270px;
+$header-background: rgb(101, 102, 242);
+$menu-item-background: #A7A3CB;
+
+@media screen and (min-device-width: 320px) {
+  #menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #55488C;
+  }
+  #content {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-left: 1px solid #000000;
+    transition: left 0.25s;
+  }
+}
+
+/*************************** menu/main-content animation ***************************/
+
+#container {
+  background: rgba(166, 186, 193, 0.93);
+}
+
+/*************************** HEADER ***************************/
+#header-container {
+  background: $header-background;
+  height: $header-height;
+  width: 100%;
+}
+
+#header-content {
+  color: white;
+}
+
+div.menu-icon {
+  margin: 25px 10px 0;
+  width: 32px;
+  height: 32px;
+  z-index: 100;
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+div.header-title {
+  line-height: 65px;
+}
+
+.loader-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgb(242, 242, 242);
+  opacity: 0.5;
+  text-align: center;
+  z-index: 150;
+
+  img {
+    margin-top: 10px;
+  }
+}
+
+.loader {
+  position: relative;
+  height: 100px;
+  top: 150px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/*************************** MENU ***************************/
+.menu-header {
+  height: $header-height;
+}
+
+.menu-row {
+  width: 100%;
+  height: 50px;
+}
+
+.menu-item-icon-container {
+  width: 40px;
+  height: inherit;
+  padding-top: 13px;
+  padding-left: 8px;
+
+  .menu-item-icon {
+    width: 24px;
+    height: 24px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.menu-item-selected {
+  background: $menu-item-background;
+  .menu-item-text {
+    color: black;
+    border-bottom: black;
+  }
+}
+
+.before-selected .menu-item-text {
+  border-bottom: none;
+}
+
+.menu-item-text {
+  border-bottom: 1px solid #000000;
+  text-align: left;
+  width: 230px;
+  height: inherit;
+  padding-top: 15px;
+  color: rgb(186, 188, 211);
+  a {
+    color: #000000;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+}
+
+/*************************** CONTENT ***************************/
+.page-title {
+  margin-left: 35px;
+  padding-top: 20px;
+  font-size: 30px;
+  font-weight: 200;
+  height: 50px;
+}
+
+.page-host {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -$header-height;
+}
+
+.page-wrapper {
+  margin: 5px 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.center-align-block {
+  position: relative;
+  text-align: center;
+  width: 240px;
+  left: 40px;
+  button {
+    font-size: 16px !important;
+    height: 45px;
+  }
+}
+
+.left-align-block {
+  position: relative;
+  left: 30px;
+  width: 100%;
+}
+
+.navigation-block {
+
+}
+
+.header-navig-title {
+  margin: 30px 20px;
+  color: #000000;
+  font-weight: 200;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.navig-button-inactive {
+  color: #284ebf;
+}
+
+.navig-button-active {
+  color: white;
+}
+
+.row-block {
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(216, 213, 213);
+
+  .title {
+    font-weight: 200;
+  }
+}
+
+/*************************** Land page ******************************/
+
+.land {
+  padding-top: 200px;
+  height: 100%;
+  background: white;
+
+  .center-align-block {
+    margin-bottom: 20px;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+/*************************** Login page ******************************/
+.main-error {
+  height: 50px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.login-form {
+  margin-top: 70px;
+  width: 100%;
+  input {
+    width: 220px;
+    height: 40px;
+    margin-top: 25px;
+    margin-left: 50px;
+  }
+}
+
+.login-btn {
+  margin-top: 20px;
+}
+
+.bottom {
+  margin-top: 100px;
+}
+
+/*************************** Home page ******************************/
+
+.home {
+  height: 100%;
+  padding-top: 5px;
+  button {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+.todo-dropdown {
+  margin: 0 2px;
+}
+
+.search-navig {
+  width: 100%;
+  height: 40px;
+  margin-top: 5px;
+  line-height: 40px;
+
+  .tab {
+    width: 50%;
+    font-size: 16px;
+    text-decoration: underline;
+    text-align: center;
+    border-radius: 2px;
+  }
+
+  .tab.active {
+    background: $header-background;
+  }
+}
+
+#search-content-wrapper {
+  width: 100%;
+  padding: 0 5px;
+}
+
+.search-content {
+  width: 100%;
+  margin-top: 5px;
+  padding: 0 5px;
+  height: 300px;
+
+  a {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+/*************************** Location page ******************************/
+
+.location {
+  height: 100%;
+  width: 100%;
+
+  .title {
+    font-weight: 200;
+  }
+}
+
+.people-list {
+  margin: 5px 0;
+  width: 100%;
+}
